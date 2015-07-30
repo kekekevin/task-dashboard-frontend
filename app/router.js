@@ -6,6 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('boards');
+
+  this.route('board', {
+    path: '/boards/:board_id'
+  });
 });
 
 export default Router;
