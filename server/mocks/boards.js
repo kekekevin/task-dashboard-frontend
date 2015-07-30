@@ -1,10 +1,17 @@
 module.exports = function(app) {
   var express = require('express');
   var boardsRouter = express.Router();
+  var boards = [
+    {
+      id: 0,
+      name: "Kevin's tasks",
+      timeZone: "America/Chicago"
+    }
+  ];
 
   boardsRouter.get('/', function(req, res) {
     res.send({
-      'boards': []
+      'boards': boards
     });
   });
 
@@ -14,9 +21,7 @@ module.exports = function(app) {
 
   boardsRouter.get('/:id', function(req, res) {
     res.send({
-      'boards': {
-        id: req.params.id
-      }
+      'boards': boards[req.params.id]
     });
   });
 
