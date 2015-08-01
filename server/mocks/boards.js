@@ -5,6 +5,7 @@ module.exports = function(app) {
     {
       id: 0,
       name: "Kevin's tasks",
+      description: "daily tasks for personal stuff",
       timeZone: "America/Chicago"
     }
   ];
