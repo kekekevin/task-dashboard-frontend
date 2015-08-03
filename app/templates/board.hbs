@@ -9,58 +9,19 @@ board
 </div>
 
 <div class="row">
-  {{outlet}}
-  <div class="col-md-3">
-    <div class="panel panel-danger">
-      <div class="panel-heading">Today</div>
-
-      <ul class="list-group">
-        <a href="#" class="list-group-item">Cras justo odio</a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
-      </ul>
+  {{#each model.swimLanes key="id" as |swimLane|}}
+    <div class="col-md-3">
+      <div class="panel panel-primary">
+      <div class="panel-heading">{{swimLane.name}}</div>
+        <ul class="list-group">
+          <a href="#" class="list-group-item">Cras justo odio</a>
+          <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+          <a href="#" class="list-group-item">Morbi leo risus</a>
+          <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+          <a href="#" class="list-group-item">Vestibulum at eros</a>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="col-md-3">
-    <div class="panel panel-warning">
-      <div class="panel-heading">Tomorrow</div>
-
-      <ul class="list-group">
-        <a href="#" class="list-group-item">Cras justo odio</a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
-      </ul>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="panel panel-info">
-      <div class="panel-heading">One Week</div>
-
-      <ul class="list-group">
-        <a href="#" class="list-group-item">Cras justo odio</a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
-      </ul>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="panel panel-success">
-      <div class="panel-heading">One Month +</div>
-
-      <ul class="list-group">
-        <a href="#" class="list-group-item">Cras justo odio</a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
-      </ul>
-    </div>
-  </div>
-
+  {{/each}}
 </div>
+{{outlet}}
