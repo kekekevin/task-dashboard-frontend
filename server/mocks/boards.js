@@ -7,35 +7,7 @@ module.exports = function(app) {
       name: "Kevin's tasks",
       description: "daily tasks for personal stuff",
       timeZone: "America/Chicago",
-      links: {
-        swimLanes: "swimLanes"
-      }
-    }
-  ];
-  var swimLanes = [
-    {
-      id: 0,
-      name: "Today",
-      order: 0,
-      days: 1
-    },
-    {
-      id: 1,
-      name: "Tomorrow",
-      order: 1,
-      days: 2
-    },
-    {
-      id: 2,
-      name: "One Week",
-      order: 2,
-      days: 7
-    },
-    {
-      id: 3,
-      name: "One Month",
-      order: 3,
-      days: 30
+      swimLanes: [0, 1, 2, 3]
     }
   ];
 
@@ -66,12 +38,6 @@ module.exports = function(app) {
   boardsRouter.delete('/:id', function(req, res) {
     res.status(204).end();
   });
-
-  boardsRouter.get('/:boardId/swimLanes', function (req, res) {
-    res.send({
-      'swimLanes': swimLanes
-    })
-  })
 
   app.use('/api/boards', boardsRouter);
 };

@@ -6,31 +6,39 @@ module.exports = function(app) {
       id: 0,
       name: "Today",
       order: 0,
-      days: 1
+      days: 1,
+      tasks: [],
+      board: 0
     },
     {
       id: 1,
       name: "Tomorrow",
       order: 1,
-      days: 2
+      days: 2,
+      tasks: [],
+      board: 0
     },
     {
       id: 2,
       name: "One Week",
       order: 2,
-      days: 7
+      days: 7,
+      tasks: [],
+      board: 0
     },
     {
       id: 3,
       name: "One Month",
       order: 3,
-      days: 30
+      days: 30,
+      tasks: [],
+      board: 0
     }
   ];
 
   swimLanesRouter.get('/', function(req, res) {
     res.send({
-      'swim-lanes': swimLanes
+      'swimLanes': []
     });
   });
 
@@ -40,13 +48,13 @@ module.exports = function(app) {
 
   swimLanesRouter.get('/:id', function(req, res) {
     res.send({
-      'swim-lanes': swimLanes[req.params.id]
+      'swimLanes': swimLanes[req.params.id]
     });
   });
 
   swimLanesRouter.put('/:id', function(req, res) {
     res.send({
-      'swim-lanes': {
+      'swimLanes': {
         id: req.params.id
       }
     });
