@@ -7,7 +7,7 @@ module.exports = function(app) {
       name: "Today",
       order: 0,
       days: 1,
-      tasks: [],
+      tasks: [0, 1, 2],
       board: 0
     },
     {
@@ -15,7 +15,7 @@ module.exports = function(app) {
       name: "Tomorrow",
       order: 1,
       days: 2,
-      tasks: [],
+      tasks: [3, 4, 5, 6],
       board: 0
     },
     {
@@ -23,7 +23,7 @@ module.exports = function(app) {
       name: "One Week",
       order: 2,
       days: 7,
-      tasks: [],
+      tasks: [7],
       board: 0
     },
     {
@@ -31,7 +31,7 @@ module.exports = function(app) {
       name: "One Month",
       order: 3,
       days: 30,
-      tasks: [],
+      tasks: [8, 9],
       board: 0
     }
   ];
