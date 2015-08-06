@@ -10,16 +10,7 @@ board
 
 <div class="row">
   {{#each model.swimLanes key="id" as |swimLane|}}
-    <div class="col-md-3">
-      <div class="panel panel-primary">
-      <div class="panel-heading">{{swimLane.name}}</div>
-        <ul class="list-group">
-          {{#each swimLane.tasks key="id" as |task|}}
-            {{lane-task summary=task.summary}}
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+    {{swim-lane swimLane=swimLane}}
   {{/each}}
 </div>
 {{outlet}}

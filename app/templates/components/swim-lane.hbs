@@ -1,0 +1,8 @@
+<div class="panel panel-primary">
+<div class="panel-heading">{{swimLane.name}}</div>
+  <ul class="list-group">
+    {{#each swimLane.tasks key="id" as |task|}}
+      {{lane-task summary=task.summary}}
+    {{/each}}
+  </ul>
+</div>
