@@ -2,7 +2,7 @@
 <div class="panel-heading">{{swimLane.name}}</div>
   <ul class="list-group">
     {{#each swimLane.tasks key="id" as |task|}}
-      {{lane-task summary=task.summary}}
+      {{lane-task summary=task.summary task=task.id}}
     {{/each}}
   </ul>
 </div>
