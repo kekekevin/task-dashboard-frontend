@@ -8,6 +8,6 @@ export default Ember.Component.extend({
   draggable: true,
 
   dragStart(event) {
-    return event.dataTransfer.setData("text/data", this.get("task"))
+    return event.dataTransfer.setData("text/data", this.get("task"));
   }
 });

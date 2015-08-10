@@ -10,7 +10,7 @@ board
 
 <div class="row">
   {{#each model.swimLanes key="id" as |swimLane|}}
-    {{swim-lane swimLane=swimLane}}
+    {{swim-lane swimLane=swimLane dropped="addTask"}}
   {{/each}}
 </div>
 {{outlet}}

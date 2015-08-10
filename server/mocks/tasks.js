@@ -32,42 +32,42 @@ module.exports = function(app) {
     },
     {
       id: 4,
-      summary: "task 1",
+      summary: "task 5",
       description: "description 1",
       dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
       swimLane: 1
     },
     {
       id: 5,
-      summary: "task 1",
+      summary: "task 6",
       description: "description 1",
       dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
       swimLane: 1
     },
     {
       id: 6,
-      summary: "task 1",
+      summary: "task 7",
       description: "description 1",
       dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
       swimLane: 1
     },
     {
       id: 7,
-      summary: "task 1",
+      summary: "task 8",
       description: "description 1",
       dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
       swimLane: 2
     },
     {
       id: 8,
-      summary: "task 1",
+      summary: "task 9",
       description: "description 1",
       dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
       swimLane: 3
     },
     {
       id: 9,
-      summary: "task 1",
+      summary: "task 10",
       description: "description 1",
       dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
       swimLane: 3
