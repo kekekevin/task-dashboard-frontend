@@ -1,4 +1,4 @@
-# Task-dashboard
+# Task-dashboard [![Build Status](https://travis-ci.org/kekekevin/task-dashboard.svg?branch=master)](https://travis-ci.org/kekekevin/task-dashboard)
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
