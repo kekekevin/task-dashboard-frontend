@@ -1,3 +1,20 @@
-boards
-{{outlet}}
-{{#link-to 'board' 0}} My Board {{/link-to}}
+<div class="page-header">
+  <h1>Available Boards</h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Board</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |board|}}
+      <tr>
+        <td>{{#link-to 'board' board}}{{board.name}}{{/link-to}}</td>
+        <td>{{board.description}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
