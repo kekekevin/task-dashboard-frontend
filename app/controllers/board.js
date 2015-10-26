@@ -6,10 +6,11 @@ export default Ember.Controller.extend({
   },
   actions: {
     addTask(taskId, swimLaneId) {
-      var self = this;
-      this.store.find("task", taskId).then(function(task) {
-        self.store.find("swim-lane", swimLaneId).then(function(swimLane) {
-          swimLane.get("tasks").pushObject(task);
+      this.store.find("task", taskId).then((task) => {
+        this.store.find("swim-lane", swimLaneId).then((swimLane) => {
+          var tasks = swimLane.get("tasks")
+          tasks.pushObject(task);
+          task.save();
         });
       });
     }
