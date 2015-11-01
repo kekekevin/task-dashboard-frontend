@@ -55,5 +55,5 @@ module.exports = function(app) {
     res.status(204).end();
   });
 
-  app.use('/api/swim_lanes', swimLanesRouter);
+  app.use('/swim-lanes', swimLanesRouter);
 };

@@ -5,7 +5,6 @@ export default ActiveModelAdapter.extend({
   shouldBackgroundReloadRecord(){
     return false;
   },
-  namespace: "api",
   pathForType: function(modelName) {
     var underscore = Ember.String.underscore(modelName);
     return Ember.String.pluralize(underscore);
