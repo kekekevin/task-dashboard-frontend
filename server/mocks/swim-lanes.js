@@ -3,42 +3,33 @@ module.exports = function(app) {
   var swimLanesRouter = express.Router();
   var swimLanes = [
     {
-      id: 0,
-      name: "Today",
-      order: 0,
-      days: 1,
-      tasks: [0, 1, 2],
-      board: 0
-    },
-    {
-      id: 1,
-      name: "Tomorrow",
-      order: 1,
-      days: 2,
-      tasks: [3, 4, 5, 6],
-      board: 0
-    },
-    {
-      id: 2,
-      name: "One Week",
-      order: 2,
-      days: 7,
-      tasks: [7],
-      board: 0
-    },
-    {
-      id: 3,
-      name: "One Month",
-      order: 3,
-      days: 30,
-      tasks: [8, 9],
-      board: 0
+      "id":1,
+      "name":"Today",
+      "days":1,
+      "order":1,
+      "task_ids":[1]
+    },{
+      "id":2,
+      "name":"Tomorrow",
+      "days":2,"order":2,
+      "task_ids":[2]
+    },{
+      "id":3,
+      "name":"One Week",
+      "days":7,"order":3,
+      "task_ids":[3]
+    },{
+      "id":4,
+      "name":"One Month",
+      "days":30,
+      "order":4,
+      "task_ids":[4]
     }
   ];
 
   swimLanesRouter.get('/', function(req, res) {
     res.send({
-      'swimLanes': []
+      'swim_lanes': swimLanes
     });
   });
 
@@ -48,7 +39,7 @@ module.exports = function(app) {
 
   swimLanesRouter.get('/:id', function(req, res) {
     res.send({
-      'swimLanes': swimLanes[req.params.id]
+      'swim_lane': swimLanes[req.params.id - 1]
     });
   });
 
@@ -64,5 +55,5 @@ module.exports = function(app) {
     res.status(204).end();
   });
 
-  app.use('/api/swim-lanes', swimLanesRouter);
+  app.use('/api/swim_lanes', swimLanesRouter);
 };

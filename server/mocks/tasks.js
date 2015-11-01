@@ -3,74 +3,25 @@ module.exports = function(app) {
   var tasksRouter = express.Router();
   var tasks = [
     {
-      id: 0,
-      summary: "task 1",
-      description: "description 1",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 0
-    },
-    {
-      id: 1,
-      summary: "task 2",
-      description: "description 2",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 0
-    },
-    {
-      id: 2,
-      summary: "task 3",
-      description: "description 3",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 0
-    },
-    {
-      id: 3,
-      summary: "task 4",
-      description: "description 4",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 1
-    },
-    {
-      id: 4,
-      summary: "task 5",
-      description: "description 1",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 1
-    },
-    {
-      id: 5,
-      summary: "task 6",
-      description: "description 1",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 1
-    },
-    {
-      id: 6,
-      summary: "task 7",
-      description: "description 1",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 1
-    },
-    {
-      id: 7,
-      summary: "task 8",
-      description: "description 1",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 2
-    },
-    {
-      id: 8,
-      summary: "task 9",
-      description: "description 1",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 3
-    },
-    {
-      id: 9,
-      summary: "task 10",
-      description: "description 1",
-      dueDate: "Tue Aug 04 2015 19:02:29 GMT-0500 (CDT)",
-      swimLane: 3
+      "id":1,
+      "summary":"task1",
+      "description":null,
+      "due_date":"2015-10-31"
+    },{
+      "id":2,
+      "summary":"task2",
+      "description":null,
+      "due_date":"2015-11-01"
+    },{
+      "id":3,
+      "summary":"task3",
+      "description":null,
+      "due_date":"2015-11-07"
+    },{
+      "id":4,
+      "summary":"task4",
+      "description":null,
+      "due_date":"2015-11-30"
     }
   ];
 
@@ -86,7 +37,7 @@ module.exports = function(app) {
 
   tasksRouter.get('/:id', function(req, res) {
     res.send({
-      'tasks': tasks[req.params.id]
+      'task': tasks[req.params.id - 1]
     });
   });
 

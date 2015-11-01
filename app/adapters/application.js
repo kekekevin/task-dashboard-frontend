@@ -1,13 +1,13 @@
-import DS from 'ember-data';
 import Ember from 'ember';
+import ActiveModelAdapter from 'active-model-adapter';
 
-export default DS.RESTAdapter.extend({
+export default ActiveModelAdapter.extend({
   shouldBackgroundReloadRecord(){
     return false;
   },
   namespace: "api",
   pathForType: function(modelName) {
-    var decamelized = Ember.String.decamelize(modelName);
-    return Ember.String.pluralize(decamelized);
+    var underscore = Ember.String.underscore(modelName);
+    return Ember.String.pluralize(underscore);
   }
 });
