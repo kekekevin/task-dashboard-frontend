@@ -2,6 +2,7 @@ import Ember from 'ember';
 import ActiveModelAdapter from 'active-model-adapter';
 
 export default ActiveModelAdapter.extend({
+  namespace: "/api",
   shouldBackgroundReloadRecord(){
     return false;
   },
