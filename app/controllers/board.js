@@ -13,6 +13,9 @@ export default Ember.Controller.extend({
           task.save();
         });
       });
-    }
+    },
+    showModal() {
+      Ember.$("#add-task-modal").modal();
+    },
   }
 });
