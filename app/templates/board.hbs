@@ -25,6 +25,6 @@
 
 <div class="row">
   {{#each model.swimLanes key="id" as |swimLane|}}
-    {{swim-lane swimLane=swimLane dropped="addTask"}}
+    {{swim-lane swimLane=swimLane onDrop=(action 'addTask')}}
   {{/each}}
 </div>

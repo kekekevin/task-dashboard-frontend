@@ -15,6 +15,6 @@ export default Ember.Component.extend({
     event.preventDefault();
 
     var data = event.dataTransfer.getData("text/data");
-    this.sendAction('dropped', data, this.get("swimLane").get("id"));
+    this.get('onDrop')(data, this.get('swimLane.id'));
   }
 });
