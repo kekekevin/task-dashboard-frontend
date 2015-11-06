@@ -5,5 +5,7 @@ export default Ember.Component.extend({
   classNames: ['btn', 'btn-default'],
   click() {
     this.get('onClick')();
+
+    return false;
   },
 });
