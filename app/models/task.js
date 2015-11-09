@@ -5,5 +5,6 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   dueDate: DS.attr('date'),
 
-  swimLane: DS.belongsTo('swim-lane')
+  swimLane: DS.belongsTo('swim-lane'),
+  board: DS.belongsTo('board')
 });

@@ -17,7 +17,10 @@ export default Ember.Controller.extend({
       });
     },
     showModal() {
-      this.set('task', this.store.createRecord('task'));
+      const task = this.store.createRecord('task');
+      task.set('board', this.get('model'));
+      this.set('task', task);
+
       Ember.$("#add-task-modal").modal();
     },
     saveTask() {
