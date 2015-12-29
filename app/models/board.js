@@ -5,5 +5,5 @@ export default DS.Model.extend({
   timeZone: DS.attr('string'),
   description: DS.attr('string'),
 
-  swimLanes: DS.hasMany('swim-lane', { async: true })
+  swimLanes: DS.hasMany('swim-lane', { async: true }),
 });

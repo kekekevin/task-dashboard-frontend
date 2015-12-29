@@ -1,9 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  swimLaneForTask() {
-    return this.model;
-  },
+  task: Ember.computed(function() {
+    return this.store.createRecord('task', {
+      summary: 'test'
+    });
+  }),
   actions: {
     addTask(taskId, swimLaneId) {
       this.store.find("task", taskId).then((task) => {
@@ -13,6 +15,16 @@ export default Ember.Controller.extend({
           task.save();
         });
       });
-    }
+    },
+    showModal() {
+      const task = this.store.createRecord('task');
+      task.set('board', this.get('model'));
+      this.set('task', task);
+
+      Ember.$("#add-task-modal").modal();
+    },
+    saveTask() {
+      this.get('task').save();
+    },
   }
 });

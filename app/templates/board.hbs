@@ -1,13 +1,30 @@
+{{#create-modal title='Add Task' onSave=(action 'saveTask')}}
+  <div class="form-group">
+    <label for="summary">Summary</label>
+    {{input id="summary" type="text" classNames="form-control" placeholder="Summary" value=task.summary}}
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    {{input id="description" type="text" classNames="form-control" placeholder="Description" value=task.description}}
+  </div>
+  <div class="form-group">
+    <label for="due-date" class="control-label">Due Date</label>
+    {{bootstrap-datepicker id="due-date" autoclose=true placeholder="Due Date" class="form-control" value=task.dueDate}}
+  </div>
+{{/create-modal}}
+
 <div class="page-header">
   <h1>{{model.name}}</h1>
   <p class="lead">
-  {{model.description}}
-    <a href="#" class="btn btn-primary pull-right">Add Task</a>
+    {{model.description}}
+    <span class="pull-right">
+      {{#default-button onClick=(action 'showModal')}}Add Task{{/default-button}}
+    </span>
   </p>
 </div>
 
 <div class="row">
   {{#each model.swimLanes key="id" as |swimLane|}}
-    {{swim-lane swimLane=swimLane dropped="addTask"}}
+    {{swim-lane swimLane=swimLane onDrop=(action 'addTask')}}
   {{/each}}
 </div>

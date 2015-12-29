@@ -53,5 +53,5 @@ module.exports = function(app) {
     res.status(204).end();
   });
 
-  app.use('/tasks', tasksRouter);
+  app.use('/api/tasks', tasksRouter);
 };
