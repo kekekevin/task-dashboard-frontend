@@ -9,7 +9,11 @@
   </div>
   <div class="form-group">
     <label for="time-zone" class="control-label">Time zone</label>
-    {{view "select" id="time-zone" classNames="form-control" content=timeZones value=board.timeZone}}
+    {{#x-select id="time-zone" classNames="form-control" value=board.timeZone }}
+      {{#each timeZones as |zone|}}
+        {{#x-option value=zone}}{{zone}}{{/x-option}}
+      {{/each}}
+    {{/x-select}}
   </div>
 {{/create-modal}}
 
